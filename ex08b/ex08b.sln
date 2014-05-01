@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ex08b", "ex08b.vcproj", "{F39C4E1B-D782-4F43-A32B-2E0C07B8B27E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mybroswer", "..\mybroswer\mybroswer.vcproj", "{DD34DB9A-4C51-4CE6-B860-1539E4AEFEB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F39C4E1B-D782-4F43-A32B-2E0C07B8B27E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F39C4E1B-D782-4F43-A32B-2E0C07B8B27E}.Debug|Win32.Build.0 = Debug|Win32
+		{F39C4E1B-D782-4F43-A32B-2E0C07B8B27E}.Release|Win32.ActiveCfg = Release|Win32
+		{F39C4E1B-D782-4F43-A32B-2E0C07B8B27E}.Release|Win32.Build.0 = Release|Win32
+		{DD34DB9A-4C51-4CE6-B860-1539E4AEFEB4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DD34DB9A-4C51-4CE6-B860-1539E4AEFEB4}.Debug|Win32.Build.0 = Debug|Win32
+		{DD34DB9A-4C51-4CE6-B860-1539E4AEFEB4}.Release|Win32.ActiveCfg = Release|Win32
+		{DD34DB9A-4C51-4CE6-B860-1539E4AEFEB4}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

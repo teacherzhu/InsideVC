@@ -1,0 +1,70 @@
+// Created by Microsoft (R) C/C++ Compiler Version 11.00.0000 (af473f31).
+//
+// Debug/ex24a.tlh
+//
+// C++ source equivalent of Win32 type library ..\ex24a\debug\ex24a.tlb
+// compiler-generated file created 04/22/97 at 22:06:00 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace BankDriv {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("a9515ab6-5b85-11d0-848f-00400526305b"))
+/* dispinterface */ IBank;
+struct /* coclass */ Bank;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IBank, __uuidof(IDispatch));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("a9515ab6-5b85-11d0-848f-00400526305b"))
+IBank : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetBalance,put=PutBalance))
+    double Balance;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    double Withdrawal (
+        double dAount );
+    HRESULT Deposit (
+        double dAmount );
+
+    // Properties:
+    double GetBalance ( );
+    void PutBalance ( double _val );
+};
+
+struct __declspec(uuid("632b1e4c-f287-11ce-b5e3-00aa005b1574"))
+Bank;
+    // [ default ] dispinterface IBank
+
+//
+// Wrapper method implementations
+//
+
+#include "Debug/ex24a.tli"
+
+} // namespace BankDriv
+
+#pragma pack(pop)

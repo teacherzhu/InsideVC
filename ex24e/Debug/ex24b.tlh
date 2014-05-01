@@ -1,0 +1,71 @@
+// Created by Microsoft (R) C/C++ Compiler Version 11.00.0000 (66c4ee52).
+//
+// Debug/ex24b.tlh
+//
+// C++ source equivalent of Win32 type library ..\ex24b\debug\ex24b.tlb
+// compiler-generated file created 04/22/97 at 22:06:01 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace Ex24bDriv {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("a9515ad7-5b85-11d0-848f-00400526305b"))
+/* dispinterface */ IEx24bAuto;
+struct /* coclass */ Ex24bAuto;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IEx24bAuto, __uuidof(IDispatch));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("a9515ad7-5b85-11d0-848f-00400526305b"))
+IEx24bAuto : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetLongData,put=PutLongData))
+    long LongData;
+    __declspec(property(get=GetTextData,put=PutTextData))
+    _variant_t TextData;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    VARIANT_BOOL DisplayDialog ( );
+
+    // Properties:
+    long GetLongData ( );
+    void PutLongData ( long _val );
+    _variant_t GetTextData ( );
+    void PutTextData ( const _variant_t & _val );
+};
+
+struct __declspec(uuid("a9515ad8-5b85-11d0-848f-00400526305b"))
+Ex24bAuto;
+    // [ default ] dispinterface IEx24bAuto
+
+//
+// Wrapper method implementations
+//
+
+#include "Debug/ex24b.tli"
+
+} // namespace Ex24bDriv
+
+#pragma pack(pop)

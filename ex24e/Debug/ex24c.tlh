@@ -1,0 +1,104 @@
+// Created by Microsoft (R) C/C++ Compiler Version 11.00.0000 (48986c1f).
+//
+// Debug/ex24c.tlh
+//
+// C++ source equivalent of Win32 type library ..\ex24c\debug\ex24c.tlb
+// compiler-generated file created 04/22/97 at 22:06:01 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace ClockDriv {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("a9515b02-5b85-11d0-848f-00400526305b"))
+/* dispinterface */ IEx24c;
+struct /* coclass */ Document;
+struct __declspec(uuid("a9515b16-5b85-11d0-848f-00400526305b"))
+/* dispinterface */ IAlarm;
+struct /* coclass */ Alarm;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IEx24c, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(IAlarm, __uuidof(IDispatch));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("a9515b02-5b85-11d0-848f-00400526305b"))
+IEx24c : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetFigure,put=PutFigure))
+    _variant_t Figure[];
+    __declspec(property(get=GetTime,put=PutTime))
+    DATE Time;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    _variant_t GetFigure (
+        short n );
+    void PutFigure (
+        short n,
+        const _variant_t & _arg2 );
+    HRESULT ShowWin ( );
+    IDispatch * CreateAlarm (
+        DATE Time );
+    HRESULT RefreshWin ( );
+
+    // Properties:
+    DATE GetTime ( );
+    void PutTime ( DATE _val );
+};
+
+struct __declspec(uuid("0389da63-cbdd-11ce-b337-88ea36de9e4e"))
+Document;
+    // [ default ] dispinterface IEx24c
+
+struct __declspec(uuid("a9515b16-5b85-11d0-848f-00400526305b"))
+IAlarm : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetTime,put=PutTime))
+    DATE Time;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Properties:
+    DATE GetTime ( );
+    void PutTime ( DATE _val );
+};
+
+struct __declspec(uuid("a9515b17-5b85-11d0-848f-00400526305b"))
+Alarm;
+    // [ default ] dispinterface IAlarm
+
+//
+// Wrapper method implementations
+//
+
+#include "Debug/ex24c.tli"
+
+} // namespace ClockDriv
+
+#pragma pack(pop)

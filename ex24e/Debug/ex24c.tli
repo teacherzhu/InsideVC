@@ -1,0 +1,63 @@
+// Created by Microsoft (R) C/C++ Compiler Version 11.00.0000 (48986c1f).
+//
+// Debug/ex24c.tli
+//
+// Wrapper implementations for Win32 type library ..\ex24c\debug\ex24c.tlb
+// compiler-generated file created 04/22/97 at 22:06:01 - DO NOT EDIT!
+
+#pragma once
+
+//
+// dispinterface IEx24c wrapper method implementations
+//
+
+inline _variant_t IEx24c::GetFigure ( short n ) {
+    VARIANT _result;
+    _com_dispatch_method(this, 0x5, DISPATCH_PROPERTYGET, VT_VARIANT, (void*)&_result, 
+        L"\x0002", n);
+    return _variant_t(_result, false);
+}
+
+inline void IEx24c::PutFigure ( short n, const _variant_t & _arg2 ) {
+    _com_dispatch_method(this, 0x5, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0002\x000c", n, &_arg2);
+}
+
+inline HRESULT IEx24c::ShowWin ( ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline IDispatch * IEx24c::CreateAlarm ( DATE Time ) {
+    IDispatch * _result;
+    _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_DISPATCH, (void*)&_result, 
+        L"\x0007", Time);
+    return _result;
+}
+
+inline HRESULT IEx24c::RefreshWin ( ) {
+    return _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline DATE IEx24c::GetTime ( ) {
+    DATE _result;
+    _com_dispatch_propget(this, 0x1, VT_DATE, (void*)&_result);
+    return _result;
+}
+
+inline void IEx24c::PutTime ( DATE _val ) {
+    _com_dispatch_propput(this, 0x1, VT_DATE, _val);
+}
+
+//
+// dispinterface IAlarm wrapper method implementations
+//
+
+inline DATE IAlarm::GetTime ( ) {
+    DATE _result;
+    _com_dispatch_propget(this, 0x1, VT_DATE, (void*)&_result);
+    return _result;
+}
+
+inline void IAlarm::PutTime ( DATE _val ) {
+    _com_dispatch_propput(this, 0x1, VT_DATE, _val);
+}

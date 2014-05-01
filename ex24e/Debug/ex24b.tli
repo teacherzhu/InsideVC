@@ -1,0 +1,38 @@
+// Created by Microsoft (R) C/C++ Compiler Version 11.00.0000 (66c4ee52).
+//
+// Debug/ex24b.tli
+//
+// Wrapper implementations for Win32 type library ..\ex24b\debug\ex24b.tlb
+// compiler-generated file created 04/22/97 at 22:06:01 - DO NOT EDIT!
+
+#pragma once
+
+//
+// dispinterface IEx24bAuto wrapper method implementations
+//
+
+inline VARIANT_BOOL IEx24bAuto::DisplayDialog ( ) {
+    VARIANT_BOOL _result;
+    _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_BOOL, (void*)&_result, NULL);
+    return _result;
+}
+
+inline long IEx24bAuto::GetLongData ( ) {
+    long _result;
+    _com_dispatch_propget(this, 0x1, VT_I4, (void*)&_result);
+    return _result;
+}
+
+inline void IEx24bAuto::PutLongData ( long _val ) {
+    _com_dispatch_propput(this, 0x1, VT_I4, _val);
+}
+
+inline _variant_t IEx24bAuto::GetTextData ( ) {
+    VARIANT _result;
+    _com_dispatch_propget(this, 0x2, VT_VARIANT, (void*)&_result);
+    return _variant_t(_result, false);
+}
+
+inline void IEx24bAuto::PutTextData ( const _variant_t & _val ) {
+    _com_dispatch_propput(this, 0x2, VT_VARIANT, &_val);
+}
